@@ -274,9 +274,15 @@
 
   if (techToggle && techDrawer && techPanel) {
     techToggle.addEventListener("click", function () {
-      techDrawer.hidden = !techDrawer.hidden;
-      techToggle.setAttribute("aria-expanded", techDrawer.hidden ? "false" : "true");
-      techPanel.classList.toggle("is-open", !techDrawer.hidden);
+      var open = !techPanel.classList.contains("is-open");
+      techPanel.classList.toggle("is-open", open);
+      techToggle.setAttribute("aria-expanded", open ? "true" : "false");
+      techDrawer.setAttribute("aria-hidden", open ? "false" : "true");
+      if (open) {
+        techDrawer.removeAttribute("inert");
+      } else {
+        techDrawer.setAttribute("inert", "");
+      }
     });
   }
 

@@ -246,57 +246,65 @@
           <h3 class="tech-heading">Technologies</h3>
           <div class="tech-panel">
             <div class="tech-panel-bar">
-              <button
-                type="button"
-                class="tech-panel-toggle"
-                id="tech-panel-toggle"
-                aria-expanded="false"
-                aria-controls="tech-panel-drawer"
-              >
-                <span class="visually-hidden">Show or hide tools and technologies with logos</span>
-                <svg class="tech-panel-chevron" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                  <path d="M6 9l6 6 6-6" />
-                </svg>
-              </button>
-              <p class="tech-panel-bar-title">Tools &amp; technologies</p>
+              <div class="tech-panel-bar-start">
+                <button
+                  type="button"
+                  class="tech-panel-toggle"
+                  id="tech-panel-toggle"
+                  aria-expanded="false"
+                  aria-controls="tech-panel-drawer"
+                >
+                  <span class="visually-hidden">Show or hide tools and technologies with logos</span>
+                  <svg class="tech-panel-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M6 9l6 6 6-6" />
+                  </svg>
+                </button>
+                <div class="tech-panel-bar-text">
+                  <p class="tech-panel-bar-eyebrow">At a glance</p>
+                  <p class="tech-panel-bar-title">Tools &amp; technologies</p>
+                </div>
+              </div>
               <div class="tech-panel-bar-main">
-                <div class="tech-marquee" aria-label="Technologies overview">
-                  <div class="tech-marquee-inner">
-                    <ul class="tech-marquee-track">
-                      <li>Python</li>
-                      <li>Flutter</li>
-                      <li>React</li>
-                      <li>Supabase</li>
-                      <li>MongoDB</li>
-                      <li>Gemini</li>
-                      <li>Meshy AI</li>
-                      <li>OpenAI</li>
-                      <li>Git</li>
-                      <li>GitHub</li>
-                      <li>VS Code</li>
-                      <li>AWS</li>
-                      <li>FastAPI</li>
-                    </ul>
-                    <ul class="tech-marquee-track" aria-hidden="true">
-                      <li>Python</li>
-                      <li>Flutter</li>
-                      <li>React</li>
-                      <li>Supabase</li>
-                      <li>MongoDB</li>
-                      <li>Gemini</li>
-                      <li>Meshy AI</li>
-                      <li>OpenAI</li>
-                      <li>Git</li>
-                      <li>GitHub</li>
-                      <li>VS Code</li>
-                      <li>AWS</li>
-                      <li>FastAPI</li>
-                    </ul>
+                <div class="tech-marquee-shell">
+                  <div class="tech-marquee" aria-label="Technologies overview">
+                    <div class="tech-marquee-inner">
+                      <ul class="tech-marquee-track">
+                        <li>Python</li>
+                        <li>Flutter</li>
+                        <li>React</li>
+                        <li>Supabase</li>
+                        <li>MongoDB</li>
+                        <li>Gemini</li>
+                        <li>Meshy AI</li>
+                        <li>OpenAI</li>
+                        <li>Git</li>
+                        <li>GitHub</li>
+                        <li>VS Code</li>
+                        <li>AWS</li>
+                        <li>FastAPI</li>
+                      </ul>
+                      <ul class="tech-marquee-track" aria-hidden="true">
+                        <li>Python</li>
+                        <li>Flutter</li>
+                        <li>React</li>
+                        <li>Supabase</li>
+                        <li>MongoDB</li>
+                        <li>Gemini</li>
+                        <li>Meshy AI</li>
+                        <li>OpenAI</li>
+                        <li>Git</li>
+                        <li>GitHub</li>
+                        <li>VS Code</li>
+                        <li>AWS</li>
+                        <li>FastAPI</li>
+                      </ul>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="tech-panel-drawer" id="tech-panel-drawer" role="region" aria-labelledby="tech-drawer-label" hidden>
+            <div class="tech-drawer-collapsible">
+            <div class="tech-panel-drawer" id="tech-panel-drawer" role="region" aria-labelledby="tech-drawer-label" aria-hidden="true" inert>
               <p class="tech-drawer-hint" id="tech-drawer-label">Core tools and services for this project—backend, mobile, web, data, cloud, and AI.</p>
               <div class="tech-cards-grid">
                 <article class="tech-card">
@@ -394,6 +402,7 @@
                   <p class="tech-card-desc">Python API framework</p>
                 </article>
               </div>
+            </div>
             </div>
           </div>
         </div>
