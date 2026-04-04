@@ -268,6 +268,18 @@
     });
   }
 
+  var techToggle = document.getElementById("tech-panel-toggle");
+  var techDrawer = document.getElementById("tech-panel-drawer");
+  var techPanel = document.querySelector(".tech-panel");
+
+  if (techToggle && techDrawer && techPanel) {
+    techToggle.addEventListener("click", function () {
+      techDrawer.hidden = !techDrawer.hidden;
+      techToggle.setAttribute("aria-expanded", techDrawer.hidden ? "false" : "true");
+      techPanel.classList.toggle("is-open", !techDrawer.hidden);
+    });
+  }
+
   if (form && formStatus) {
     form.addEventListener("submit", function (e) {
       e.preventDefault();

@@ -241,31 +241,159 @@
           </figure>
         </article>
 
-        <div class="tech-marquee-wrap reveal" id="technologies">
+        <div class="tech-panel-wrap reveal" id="technologies">
           <p class="section-label">Stack</p>
           <h3 class="tech-heading">Technologies</h3>
-          <div class="tech-marquee" aria-label="Technologies used">
-            <div class="tech-marquee-inner">
-              <ul class="tech-marquee-track">
-                <li>Semantic HTML</li>
-                <li>Modern CSS</li>
-                <li>Vanilla JavaScript</li>
-                <li>REST / APIs</li>
-                <li>Git &amp; CI</li>
-                <li>Accessibility</li>
-                <li>Responsive UI</li>
-                <li>Your stack here</li>
-              </ul>
-              <ul class="tech-marquee-track" aria-hidden="true">
-                <li>Semantic HTML</li>
-                <li>Modern CSS</li>
-                <li>Vanilla JavaScript</li>
-                <li>REST / APIs</li>
-                <li>Git &amp; CI</li>
-                <li>Accessibility</li>
-                <li>Responsive UI</li>
-                <li>Your stack here</li>
-              </ul>
+          <div class="tech-panel">
+            <div class="tech-panel-bar">
+              <button
+                type="button"
+                class="tech-panel-toggle"
+                id="tech-panel-toggle"
+                aria-expanded="false"
+                aria-controls="tech-panel-drawer"
+              >
+                <span class="visually-hidden">Show or hide tools and technologies with logos</span>
+                <svg class="tech-panel-chevron" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M6 9l6 6 6-6" />
+                </svg>
+              </button>
+              <p class="tech-panel-bar-title">Tools &amp; technologies</p>
+              <div class="tech-panel-bar-main">
+                <div class="tech-marquee" aria-label="Technologies overview">
+                  <div class="tech-marquee-inner">
+                    <ul class="tech-marquee-track">
+                      <li>Python</li>
+                      <li>Flutter</li>
+                      <li>React</li>
+                      <li>Supabase</li>
+                      <li>MongoDB</li>
+                      <li>Gemini</li>
+                      <li>Meshy AI</li>
+                      <li>OpenAI</li>
+                      <li>Git</li>
+                      <li>GitHub</li>
+                      <li>VS Code</li>
+                      <li>AWS</li>
+                      <li>FastAPI</li>
+                    </ul>
+                    <ul class="tech-marquee-track" aria-hidden="true">
+                      <li>Python</li>
+                      <li>Flutter</li>
+                      <li>React</li>
+                      <li>Supabase</li>
+                      <li>MongoDB</li>
+                      <li>Gemini</li>
+                      <li>Meshy AI</li>
+                      <li>OpenAI</li>
+                      <li>Git</li>
+                      <li>GitHub</li>
+                      <li>VS Code</li>
+                      <li>AWS</li>
+                      <li>FastAPI</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="tech-panel-drawer" id="tech-panel-drawer" role="region" aria-labelledby="tech-drawer-label" hidden>
+              <p class="tech-drawer-hint" id="tech-drawer-label">Core tools and services for this project—backend, mobile, web, data, cloud, and AI.</p>
+              <div class="tech-cards-grid">
+                <article class="tech-card">
+                  <div class="tech-card-logo">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" alt="" width="48" height="48" loading="lazy" decoding="async" aria-hidden="true" />
+                  </div>
+                  <h4 class="tech-card-name">Python</h4>
+                  <p class="tech-card-desc">Backend logic &amp; scripting</p>
+                </article>
+                <article class="tech-card">
+                  <div class="tech-card-logo">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/flutter/flutter-original.svg" alt="" width="48" height="48" loading="lazy" decoding="async" aria-hidden="true" />
+                  </div>
+                  <h4 class="tech-card-name">Flutter</h4>
+                  <p class="tech-card-desc">Cross-platform mobile UI</p>
+                </article>
+                <article class="tech-card">
+                  <div class="tech-card-logo">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg" alt="" width="48" height="48" loading="lazy" decoding="async" aria-hidden="true" />
+                  </div>
+                  <h4 class="tech-card-name">React</h4>
+                  <p class="tech-card-desc">Web interface components</p>
+                </article>
+                <article class="tech-card">
+                  <div class="tech-card-logo">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/supabase/supabase-original.svg" alt="" width="48" height="48" loading="lazy" decoding="async" aria-hidden="true" />
+                  </div>
+                  <h4 class="tech-card-name">Supabase</h4>
+                  <p class="tech-card-desc">Auth, database &amp; realtime</p>
+                </article>
+                <article class="tech-card">
+                  <div class="tech-card-logo">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mongodb/mongodb-original.svg" alt="" width="48" height="48" loading="lazy" decoding="async" aria-hidden="true" />
+                  </div>
+                  <h4 class="tech-card-name">MongoDB</h4>
+                  <p class="tech-card-desc">Document data store</p>
+                </article>
+                <article class="tech-card">
+                  <div class="tech-card-logo tech-card-logo--si">
+                    <img src="https://cdn.jsdelivr.net/npm/simple-icons/icons/googlegemini.svg" alt="" width="48" height="48" loading="lazy" decoding="async" aria-hidden="true" />
+                  </div>
+                  <h4 class="tech-card-name">Gemini</h4>
+                  <p class="tech-card-desc">Google multimodal AI</p>
+                </article>
+                <article class="tech-card">
+                  <div class="tech-card-logo tech-card-logo--meshy" aria-hidden="true">
+                    <svg width="44" height="44" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M24 4L40 14v20L24 44 8 34V14L24 4z" stroke="currentColor" stroke-width="2" fill="currentColor" fill-opacity="0.14"/>
+                      <path d="M24 4v20M8 14l16 10M40 14L24 24M8 34l16-10M40 34L24 24M24 44V24" stroke="currentColor" stroke-width="1.5" opacity="0.88"/>
+                    </svg>
+                  </div>
+                  <h4 class="tech-card-name">Meshy AI</h4>
+                  <p class="tech-card-desc">3D &amp; asset generation</p>
+                </article>
+                <article class="tech-card">
+                  <div class="tech-card-logo tech-card-logo--si">
+                    <img src="https://cdn.jsdelivr.net/npm/simple-icons/icons/openai.svg" alt="" width="48" height="48" loading="lazy" decoding="async" aria-hidden="true" />
+                  </div>
+                  <h4 class="tech-card-name">OpenAI</h4>
+                  <p class="tech-card-desc">LLMs &amp; APIs</p>
+                </article>
+                <article class="tech-card">
+                  <div class="tech-card-logo">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg" alt="" width="48" height="48" loading="lazy" decoding="async" aria-hidden="true" />
+                  </div>
+                  <h4 class="tech-card-name">Git</h4>
+                  <p class="tech-card-desc">Version control</p>
+                </article>
+                <article class="tech-card">
+                  <div class="tech-card-logo tech-card-logo--github">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg" alt="" width="48" height="48" loading="lazy" decoding="async" aria-hidden="true" />
+                  </div>
+                  <h4 class="tech-card-name">GitHub</h4>
+                  <p class="tech-card-desc">Repository &amp; workflows</p>
+                </article>
+                <article class="tech-card">
+                  <div class="tech-card-logo">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vscode/vscode-original.svg" alt="" width="48" height="48" loading="lazy" decoding="async" aria-hidden="true" />
+                  </div>
+                  <h4 class="tech-card-name">VS Code</h4>
+                  <p class="tech-card-desc">Development environment</p>
+                </article>
+                <article class="tech-card">
+                  <div class="tech-card-logo tech-card-logo--si">
+                    <img src="https://cdn.jsdelivr.net/npm/simple-icons/icons/amazonaws.svg" alt="" width="48" height="48" loading="lazy" decoding="async" aria-hidden="true" />
+                  </div>
+                  <h4 class="tech-card-name">AWS</h4>
+                  <p class="tech-card-desc">Cloud infrastructure</p>
+                </article>
+                <article class="tech-card">
+                  <div class="tech-card-logo">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/fastapi/fastapi-original.svg" alt="" width="48" height="48" loading="lazy" decoding="async" aria-hidden="true" />
+                  </div>
+                  <h4 class="tech-card-name">FastAPI</h4>
+                  <p class="tech-card-desc">Python API framework</p>
+                </article>
+              </div>
             </div>
           </div>
         </div>

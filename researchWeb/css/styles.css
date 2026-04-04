@@ -1021,8 +1021,8 @@ a:hover {
   color: var(--text-muted);
 }
 
-/* Tech marquee */
-.tech-marquee-wrap {
+/* Tech panel + marquee */
+.tech-panel-wrap {
   margin-top: clamp(2.5rem, 5vw, 3.5rem);
 }
 
@@ -1034,20 +1034,90 @@ a:hover {
   letter-spacing: -0.02em;
 }
 
-.tech-marquee {
-  position: relative;
+.tech-panel {
   border-radius: var(--radius-lg);
   border: 1px solid var(--line);
   background: var(--bg-muted);
   overflow: hidden;
-  mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
+}
+
+.tech-panel-bar {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem 1rem;
+  padding: 0.65rem 0.85rem 0.65rem 0.65rem;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.25s;
+}
+
+.tech-panel.is-open .tech-panel-bar {
+  border-bottom-color: var(--line);
+}
+
+.tech-panel-toggle {
+  flex-shrink: 0;
+  display: grid;
+  place-items: center;
+  width: 2.75rem;
+  height: 2.75rem;
+  padding: 0;
+  border: 1px solid var(--line-strong);
+  border-radius: var(--radius);
+  background: var(--bg-elevated);
+  color: var(--text);
+  cursor: pointer;
+  transition: background 0.2s, border-color 0.2s, color 0.2s, transform 0.25s var(--ease-out);
+}
+
+.tech-panel-toggle:hover {
+  border-color: color-mix(in srgb, var(--accent) 35%, var(--line));
+  color: var(--accent);
+}
+
+.tech-panel-toggle:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+.tech-panel.is-open .tech-panel-chevron {
+  transform: rotate(180deg);
+}
+
+.tech-panel-chevron {
+  transition: transform 0.3s var(--ease-out);
+}
+
+.tech-panel-bar-title {
+  flex-shrink: 0;
+  margin: 0;
+  font-size: var(--step--1);
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  max-width: 11rem;
+}
+
+.tech-panel-bar-main {
+  flex: 1;
+  min-width: 0;
+  position: relative;
+  border-radius: var(--radius);
+  overflow: hidden;
+  mask-image: linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent);
+}
+
+.tech-marquee {
+  position: relative;
+  background: transparent;
+  overflow: hidden;
 }
 
 .tech-marquee-inner {
   display: flex;
   width: max-content;
-  gap: 3rem;
-  padding: 1rem 0;
+  gap: 2.5rem;
+  padding: 0.35rem 0;
   animation: marquee 32s linear infinite;
 }
 
@@ -1062,18 +1132,143 @@ a:hover {
   margin: 0;
   padding: 0;
   display: flex;
-  gap: 0.75rem;
+  gap: 0.5rem;
   flex-shrink: 0;
 }
 
 .tech-marquee-track li {
-  padding: 0.55rem 1.1rem;
+  padding: 0.45rem 0.95rem;
   background: var(--bg-elevated);
   border: 1px solid var(--line);
   border-radius: 999px;
-  font-size: var(--step--1);
+  font-size: 0.8125rem;
   font-weight: 500;
   white-space: nowrap;
+}
+
+.tech-panel-drawer {
+  padding: 1.25rem 1.25rem 1.5rem;
+  background: color-mix(in srgb, var(--bg-elevated) 55%, var(--bg-muted));
+}
+
+.tech-panel-drawer[hidden] {
+  display: none;
+}
+
+.tech-drawer-hint {
+  margin: 0 0 1.25rem;
+  font-size: var(--step--1);
+  color: var(--text-muted);
+  max-width: 42rem;
+  line-height: 1.55;
+}
+
+.tech-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(148px, 1fr));
+  gap: 0.85rem;
+}
+
+@media (min-width: 640px) {
+  .tech-cards-grid {
+    grid-template-columns: repeat(auto-fill, minmax(168px, 1fr));
+    gap: 1rem;
+  }
+}
+
+.tech-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 1.15rem 0.85rem;
+  background: var(--bg-elevated);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  transition: border-color 0.25s, transform 0.25s var(--ease-out), box-shadow 0.25s;
+}
+
+.tech-card:hover {
+  border-color: color-mix(in srgb, var(--accent) 28%, var(--line));
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.tech-card-logo {
+  width: 3.5rem;
+  height: 3.5rem;
+  display: grid;
+  place-items: center;
+  margin-bottom: 0.65rem;
+}
+
+.tech-card-logo img {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+}
+
+.tech-card-logo--si img {
+  width: 44px;
+  height: 44px;
+}
+
+/* Dark mode: Simple Icons + GitHub devicon are dark glyphs — force neutral “light ink” */
+[data-theme="dark"] .tech-card-logo--si img,
+[data-theme="dark"] .tech-card-logo--github img {
+  filter: brightness(0) invert(1);
+  opacity: 0.96;
+}
+
+[data-theme="dark"] .tech-card:hover .tech-card-logo--si img,
+[data-theme="dark"] .tech-card:hover .tech-card-logo--github img {
+  opacity: 1;
+}
+
+.tech-card-logo--meshy {
+  color: var(--accent);
+  background: var(--accent-soft);
+  border-radius: var(--radius);
+}
+
+.tech-card-logo--api,
+.tech-card-logo--a11y {
+  color: var(--accent);
+  background: var(--accent-soft);
+  border-radius: var(--radius);
+}
+
+.tech-card-name {
+  margin: 0 0 0.25rem;
+  font-family: var(--font-sans);
+  font-size: var(--step-0);
+  font-weight: 700;
+}
+
+.tech-card-desc {
+  margin: 0;
+  font-size: 0.8125rem;
+  color: var(--text-muted);
+  line-height: 1.45;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+@media (max-width: 520px) {
+  .tech-panel-bar-title {
+    display: none;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
