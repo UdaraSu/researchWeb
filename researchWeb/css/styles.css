@@ -1104,7 +1104,7 @@ a:hover {
   height: 2.625rem;
   padding: 0;
   border: 1px solid var(--line-strong);
-  border-radius: 999px;
+  border-radius: var(--radius);
   background: linear-gradient(165deg, var(--bg-elevated) 0%, color-mix(in srgb, var(--bg-muted) 35%, var(--bg-elevated)) 100%);
   color: var(--text);
   cursor: pointer;
@@ -1143,6 +1143,52 @@ a:hover {
 
 .tech-panel-chevron {
   transition: transform 0.48s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Animated hint: pulse + chevron nudge when the panel is collapsed */
+.tech-panel[data-expand-hint]:not(.is-open) .tech-panel-toggle {
+  position: relative;
+  z-index: 0;
+}
+
+.tech-panel[data-expand-hint]:not(.is-open) .tech-panel-toggle::after {
+  content: "";
+  position: absolute;
+  inset: -5px;
+  border-radius: calc(var(--radius) + 5px);
+  border: 2px solid color-mix(in srgb, var(--accent) 48%, transparent);
+  z-index: -1;
+  pointer-events: none;
+  animation: tech-toggle-hint-ring 2.4s cubic-bezier(0.35, 0, 0.25, 1) infinite;
+}
+
+@keyframes tech-toggle-hint-ring {
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 0.75;
+  }
+  55% {
+    transform: scale(1.16);
+    opacity: 0.18;
+  }
+}
+
+@keyframes tech-chevron-hint-nudge {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  30% {
+    transform: translateY(4px);
+  }
+  45% {
+    transform: translateY(1px);
+  }
+}
+
+.tech-panel[data-expand-hint]:not(.is-open) .tech-panel-chevron {
+  animation: tech-chevron-hint-nudge 1.75s ease-in-out infinite;
 }
 
 .tech-panel-bar-eyebrow {
@@ -1536,6 +1582,14 @@ a:hover {
   .tech-panel-chevron,
   .tech-panel-toggle {
     transition: none !important;
+  }
+
+  .tech-panel-toggle::after {
+    display: none !important;
+  }
+
+  .tech-panel-chevron {
+    animation: none !important;
   }
 }
 
