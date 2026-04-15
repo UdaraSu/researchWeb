@@ -1647,6 +1647,38 @@ a:hover {
   padding: 0.35rem 0 0.75rem;
 }
 
+.milestone-selector {
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+  max-width: 26rem;
+  margin: 0 auto 1.2rem;
+}
+
+.milestone-selector label {
+  font-size: var(--step--1);
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  color: var(--text-muted);
+}
+
+.milestone-selector select {
+  appearance: none;
+  font: inherit;
+  width: 100%;
+  padding: 0.7rem 0.9rem;
+  border: 1px solid var(--line-strong);
+  border-radius: 10px;
+  background: var(--bg-elevated);
+  color: var(--text);
+}
+
+.milestone-selector select:focus-visible {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px var(--accent-soft);
+}
+
 .milestone-flow-line {
   position: absolute;
   left: 50%;
@@ -2124,6 +2156,10 @@ a:hover {
 /* Team */
 .section-team {
   border-top: 1px solid var(--line);
+}
+
+.about-achievements-header {
+  margin-top: 2.5rem;
 }
 
 .section-header--team {

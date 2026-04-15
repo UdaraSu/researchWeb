@@ -13,6 +13,7 @@
   var themeToggle = document.getElementById("theme-toggle");
   var scrollBar = document.getElementById("scroll-progress-bar");
   var metaTheme = document.getElementById("meta-theme-color");
+  var milestoneSelect = document.getElementById("milestone-select");
 
   var THEME_KEY = "museum-research-theme";
   var prefersDark = window.matchMedia("(prefers-color-scheme: dark)");
@@ -188,6 +189,18 @@
     { passive: true }
   );
   updateScrollUI();
+
+  if (milestoneSelect) {
+    milestoneSelect.addEventListener("change", function () {
+      var id = milestoneSelect.value;
+      if (!id) return;
+      var target = document.getElementById(id);
+      if (!target) return;
+      var top = target.getBoundingClientRect().top + window.pageYOffset - getScrollOffset();
+      window.scrollTo({ top: top, behavior: "smooth" });
+      history.pushState(null, "", "#" + id);
+    });
+  }
 
   function runCounters() {
     if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {

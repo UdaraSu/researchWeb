@@ -31,7 +31,7 @@
         <ul class="nav-list">
           <li><a href="#home">Home</a></li>
           <li class="has-sub">
-            <a href="#scope">Scope</a>
+            <a href="#domain">Domain</a>
             <ul class="subnav">
               <li><a href="#literature">Literature</a></li>
               <li><a href="#gap">Research gap</a></li>
@@ -42,9 +42,10 @@
             </ul>
           </li>
           <li><a href="#milestones">Milestones</a></li>
-          <li><a href="#downloads">Downloads</a></li>
-          <li><a href="#achievements">Recognition</a></li>
-          <li><a href="#team">Team</a></li>
+          <li><a href="#documents">Documents</a></li>
+          <li><a href="#slides">Slides</a></li>
+          <li><a href="#about-us">About us</a></li>
+          <li><a href="#contact-us">Contact us</a></li>
         </ul>
         <div class="nav-actions">
           <button type="button" class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode" title="Theme">
@@ -55,7 +56,7 @@
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
             </span>
           </button>
-          <a href="#contact" class="btn btn-nav">Contact</a>
+          <a href="#contact-us" class="btn btn-nav">Contact us</a>
         </div>
       </nav>
     </div>
@@ -75,11 +76,11 @@
             Bridging collections and communities through accessible design, clear storytelling, and measurable engagement—without replacing the power of being in the room with the work.
           </p>
           <div class="hero-actions">
-            <a href="#scope" class="btn btn-primary">
+            <a href="#domain" class="btn btn-primary">
               <span>View research scope</span>
               <svg class="btn-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
             </a>
-            <a href="#downloads" class="btn btn-ghost">Artifacts &amp; PDFs</a>
+            <a href="#documents" class="btn btn-ghost">Documents &amp; slides</a>
           </div>
         </div>
         <aside class="hero-panel reveal" aria-label="Project highlights">
@@ -107,12 +108,12 @@
       </div>
     </section>
 
-    <section class="section section-scope" id="scope">
+    <section class="section section-scope" id="domain">
       <div class="container">
         <header class="section-header section-header-wide reveal">
-          <p class="section-label">01 — Introduction</p>
+          <p class="section-label">01 — Domain</p>
           <div class="section-header-row">
-            <h2>Project scope</h2>
+            <h2>Domain</h2>
             <p class="section-intro">
               Museums serve as custodians of memory and meaning. This study asks how digital products can extend that mission—especially for diverse audiences and resource-conscious institutions.
             </p>
@@ -419,85 +420,96 @@
           </div>
         </header>
         <div class="milestone-flow reveal" role="region" aria-label="Milestone timeline">
+          <div class="milestone-selector">
+            <label for="milestone-select">Choose assessment</label>
+            <select id="milestone-select" aria-label="Choose a milestone to view">
+              <option value="">Select an assessment</option>
+              <option value="milestone-proposal">Project Proposal</option>
+              <option value="milestone-progress-1">Progress Presentation-1</option>
+              <option value="milestone-progress-2">Progress Presentation-2</option>
+              <option value="milestone-final-assessment">Final Assessment</option>
+              <option value="milestone-viva">Viva</option>
+            </select>
+          </div>
           <div class="milestone-flow-line" aria-hidden="true"></div>
           <ol class="milestone-flow-list">
-            <li class="milestone-flow-item milestone-flow-item--right">
+            <li class="milestone-flow-item milestone-flow-item--right" id="milestone-proposal">
               <div class="milestone-flow-marker">
                 <span class="milestone-flow-node" aria-hidden="true"></span>
               </div>
               <article class="milestone-flow-card">
                 <header class="milestone-flow-card-head">
-                  <time datetime="2026-03">Mar 2026</time>
+                  <time datetime="2026-03-15">15 Mar 2026</time>
                   <span class="milestone-flow-badge" aria-hidden="true">01</span>
                 </header>
-                <h3>Project proposal</h3>
+                <h3>Project Proposal</h3>
                 <p>Scope, risk, and ethics framing for sponsor or panel review.</p>
                 <footer class="milestone-flow-card-foot">
-                  <span class="milestone-flow-weight"><span class="milestone-flow-weight-label">Weight</span><span class="milestone-flow-weight-value">— %</span></span>
+                  <span class="milestone-flow-weight"><span class="milestone-flow-weight-label">Marks</span><span class="milestone-flow-weight-value">6%</span></span>
                 </footer>
               </article>
             </li>
-            <li class="milestone-flow-item milestone-flow-item--left">
+            <li class="milestone-flow-item milestone-flow-item--left" id="milestone-progress-1">
               <div class="milestone-flow-marker">
                 <span class="milestone-flow-node" aria-hidden="true"></span>
               </div>
               <article class="milestone-flow-card">
                 <header class="milestone-flow-card-head">
-                  <time datetime="2026-06">Jun 2026</time>
+                  <time datetime="2026-06-12">12 Jun 2026</time>
                   <span class="milestone-flow-badge" aria-hidden="true">02</span>
                 </header>
-                <h3>Progress I</h3>
+                <h3>Progress Presentation-1</h3>
                 <p>Design system, information architecture, and working vertical slice.</p>
                 <footer class="milestone-flow-card-foot">
-                  <span class="milestone-flow-weight"><span class="milestone-flow-weight-label">Weight</span><span class="milestone-flow-weight-value">— %</span></span>
+                  <span class="milestone-flow-weight"><span class="milestone-flow-weight-label">Marks</span><span class="milestone-flow-weight-value">15%</span></span>
                 </footer>
               </article>
             </li>
-            <li class="milestone-flow-item milestone-flow-item--right">
+            <li class="milestone-flow-item milestone-flow-item--right" id="milestone-progress-2">
               <div class="milestone-flow-marker">
                 <span class="milestone-flow-node" aria-hidden="true"></span>
               </div>
               <article class="milestone-flow-card">
                 <header class="milestone-flow-card-head">
-                  <time datetime="2026-09">Sep 2026</time>
+                  <time datetime="2026-09-20">20 Sep 2026</time>
                   <span class="milestone-flow-badge" aria-hidden="true">03</span>
                 </header>
-                <h3>Progress II</h3>
+                <h3>Progress Presentation-2</h3>
                 <p>Integrated demo, evaluation plan, and poster narrative.</p>
                 <footer class="milestone-flow-card-foot">
-                  <span class="milestone-flow-weight"><span class="milestone-flow-weight-label">Weight</span><span class="milestone-flow-weight-value">— %</span></span>
+                  <span class="milestone-flow-weight"><span class="milestone-flow-weight-label">Marks</span><span class="milestone-flow-weight-value">18%</span></span>
                 </footer>
               </article>
             </li>
-            <li class="milestone-flow-item milestone-flow-item--left">
+            <li class="milestone-flow-item milestone-flow-item--left" id="milestone-final-assessment">
               <div class="milestone-flow-marker">
                 <span class="milestone-flow-node" aria-hidden="true"></span>
               </div>
               <article class="milestone-flow-card">
                 <header class="milestone-flow-card-head">
-                  <time datetime="2026-10">Oct 2026</time>
+                  <time datetime="2026-11-08">08 Nov 2026</time>
                   <span class="milestone-flow-badge" aria-hidden="true">04</span>
                 </header>
-                <h3>Research paper</h3>
-                <p>Full paper draft aligned with methodology, results, and discussion—ready for review or publication targets.</p>
+                <h3>Final Assessment</h3>
+                <p>Final system demo with implementation quality, evaluation results, and complete report submission.</p>
                 <footer class="milestone-flow-card-foot">
-                  <span class="milestone-flow-weight"><span class="milestone-flow-weight-label">Weight</span><span class="milestone-flow-weight-value">— %</span></span>
+                  <span class="milestone-flow-weight"><span class="milestone-flow-weight-label">Marks</span><span class="milestone-flow-weight-value">20%</span></span>
                 </footer>
               </article>
             </li>
-            <li class="milestone-flow-item milestone-flow-item--right">
+            <li class="milestone-flow-item milestone-flow-item--right" id="milestone-viva">
               <div class="milestone-flow-marker">
                 <span class="milestone-flow-node" aria-hidden="true"></span>
               </div>
               <article class="milestone-flow-card">
                 <header class="milestone-flow-card-head">
-                  <time datetime="2026-11">Nov 2026</time>
+                  <time datetime="2026-11-20">20 Nov 2026</time>
                   <span class="milestone-flow-badge" aria-hidden="true">05</span>
                 </header>
-                <h3>Final report &amp; viva</h3>
-                <p>Individual contribution, reproducibility, and oral defense.</p>
+                <h3>Viva</h3>
+                <p>Individual contribution review, technical defense, and project Q&amp;A session.</p>
                 <footer class="milestone-flow-card-foot">
-                  <span class="milestone-flow-weight"><span class="milestone-flow-weight-label">Weight</span><span class="milestone-flow-weight-value">— %</span></span>
+                  <span class="milestone-flow-weight"><span class="milestone-flow-weight-label">Marks</span><span class="milestone-flow-weight-value">10%</span></span>
                 </footer>
               </article>
             </li>
@@ -506,13 +518,13 @@
       </div>
     </section>
 
-    <section class="section" id="downloads">
+    <section class="section" id="documents">
       <div class="container">
         <header class="section-header section-header-wide reveal">
           <p class="section-label">05 — Outputs</p>
           <div class="section-header-row">
-            <h2>Downloads</h2>
-            <p class="section-intro">Host PDFs on your repo, Drive, or institutional portal—swap <code>#</code> for canonical links.</p>
+            <h2>Documents</h2>
+            <p class="section-intro">Provide links for produced and pending documents so reviewers can access each submission quickly.</p>
           </div>
         </header>
         <div class="download-grid">
@@ -520,69 +532,91 @@
             <div class="download-card-icon" aria-hidden="true">
               <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M16 13H8M16 17H8M10 9H8"/></svg>
             </div>
-            <h3>Project proposal</h3>
-            <p class="meta">Submitted — / — / —</p>
+            <h3>Project Charter</h3>
+            <p class="meta">One document</p>
             <a href="#" class="link-arrow">Open document <span aria-hidden="true">→</span></a>
           </article>
           <article class="download-card-pro reveal">
             <div class="download-card-icon" aria-hidden="true">
               <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
             </div>
-            <h3>Research paper</h3>
-            <p class="meta">Submitted — / — / —</p>
+            <h3>Proposal Document</h3>
+            <p class="meta">One document</p>
             <a href="#" class="link-arrow">Open document <span aria-hidden="true">→</span></a>
           </article>
           <article class="download-card-pro reveal">
             <div class="download-card-icon" aria-hidden="true">
               <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/></svg>
             </div>
-            <h3>Final report</h3>
-            <p class="meta">Submitted — / — / —</p>
+            <h3>Check List Documents</h3>
+            <p class="meta">Assessment checklists</p>
             <a href="#" class="link-arrow">Open document <span aria-hidden="true">→</span></a>
           </article>
           <article class="download-card-pro reveal">
             <div class="download-card-icon" aria-hidden="true">
               <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
             </div>
-            <h3>Presentations</h3>
-            <p class="meta">Progress I · II · Final</p>
+            <h3>Final Document Set</h3>
+            <p class="meta">Main + group member documents</p>
+            <a href="#" class="link-arrow">Open document <span aria-hidden="true">→</span></a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-achievements" id="slides">
+      <div class="container">
+        <header class="section-header section-header-wide reveal">
+          <p class="section-label">06 — Presentations</p>
+          <div class="section-header-row">
+            <h2>Slides of past presentations</h2>
+            <p class="section-intro">Keep links for past slides and placeholders for future updates.</p>
+          </div>
+        </header>
+        <div class="download-grid">
+          <article class="download-card-pro reveal">
+            <div class="download-card-icon" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+            </div>
+            <h3>Proposal presentation</h3>
+            <p class="meta">Past presentation slides</p>
+            <a href="#" class="link-arrow">View slides <span aria-hidden="true">→</span></a>
+          </article>
+          <article class="download-card-pro reveal">
+            <div class="download-card-icon" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+            </div>
+            <h3>Progress presentation-1</h3>
+            <p class="meta">Past presentation slides</p>
+            <a href="#" class="link-arrow">View slides <span aria-hidden="true">→</span></a>
+          </article>
+          <article class="download-card-pro reveal">
+            <div class="download-card-icon" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+            </div>
+            <h3>Progress presentation-2</h3>
+            <p class="meta">Past presentation slides</p>
+            <a href="#" class="link-arrow">View slides <span aria-hidden="true">→</span></a>
+          </article>
+          <article class="download-card-pro reveal">
+            <div class="download-card-icon" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+            </div>
+            <h3>Final presentation</h3>
+            <p class="meta">Keep provision for future update</p>
             <a href="#" class="link-arrow">View slides <span aria-hidden="true">→</span></a>
           </article>
         </div>
       </div>
     </section>
 
-    <section class="section section-achievements" id="achievements">
-      <div class="container">
-        <header class="section-header reveal">
-          <p class="section-label">06 — Recognition</p>
-          <h2>Achievements</h2>
-          <p class="section-intro">Highlight competitions, exhibitions, grants, or media—mirror the credibility block from peer research sites.</p>
-        </header>
-        <ul class="achievements-list reveal">
-          <li class="achievement-item">
-            <span class="achievement-year">20XX</span>
-            <p><strong>National / institutional award</strong> — short description of selection or outcome.</p>
-          </li>
-          <li class="achievement-item">
-            <span class="achievement-year">20XX</span>
-            <p><strong>Conference or showcase</strong> — poster, demo, or invited presentation.</p>
-          </li>
-          <li class="achievement-item">
-            <span class="achievement-year">20XX</span>
-            <p><strong>Partnership</strong> — museum, archive, or industry collaboration.</p>
-          </li>
-        </ul>
-      </div>
-    </section>
-
-    <section class="section section-team" id="team">
+    <section class="section section-team" id="about-us">
       <div class="container">
         <header class="section-header section-header-wide section-header--team reveal">
           <p class="section-label">07 — People</p>
           <div class="section-header-row">
-            <h2>Team</h2>
-            <p class="section-intro">Supervisor, co-supervisor, external supervisor, and four student members—replace placeholders with official names and affiliations.</p>
+            <h2>About us</h2>
+            <p class="section-intro">Group members with photographs, contact emails, and relevant achievements.</p>
           </div>
         </header>
         <div class="team-layout">
@@ -724,15 +758,28 @@
             </article>
           </div>
         </div>
+        <header class="section-header reveal about-achievements-header">
+          <h3>Relevant achievements</h3>
+        </header>
+        <ul class="achievements-list reveal">
+          <li class="achievement-item">
+            <span class="achievement-year">20XX</span>
+            <p><strong>National / institutional award</strong> — short description of selection or outcome.</p>
+          </li>
+          <li class="achievement-item">
+            <span class="achievement-year">20XX</span>
+            <p><strong>Conference or showcase</strong> — poster, demo, or invited presentation.</p>
+          </li>
+        </ul>
       </div>
     </section>
 
-    <section class="section contact-section" id="contact">
+    <section class="section contact-section" id="contact-us">
       <div class="container">
         <header class="section-header section-header-wide reveal">
           <p class="section-label">08 — Connect</p>
           <div class="section-header-row">
-            <h2>Contact</h2>
+            <h2>Contact us</h2>
             <p class="section-intro">Collaborators, reviewers, and museums—reach the team directly.</p>
           </div>
         </header>
@@ -760,13 +807,13 @@
           </form>
           <aside class="contact-aside contact-aside-pro">
             <div class="contact-card">
-              <p class="contact-card-label">Project inbox</p>
+              <p class="contact-card-label">General contacts</p>
               <a class="contact-email" href="mailto:yourproject@email.com">yourproject@email.com</a>
-              <p class="aside-hint">Connect this form to Formspree, Netlify Forms, or your API endpoint before production.</p>
+              <p class="aside-hint">Phone: +94 71 000 0000<br />Phone: +94 11 000 0000</p>
             </div>
             <div class="contact-card">
-              <p class="contact-card-label">Response time</p>
-              <p class="aside-hint">We aim to reply within a few working days during the academic term.</p>
+              <p class="contact-card-label">General email template</p>
+              <p class="aside-hint">Subject: [Project Inquiry] &lt;Topic&gt;<br />Body: Name, institute, purpose, and contact details.</p>
             </div>
           </aside>
         </div>
@@ -783,10 +830,10 @@
       <div class="footer-col">
         <p class="footer-heading">Navigate</p>
         <ul class="footer-links">
-          <li><a href="#scope">Scope</a></li>
+          <li><a href="#domain">Domain</a></li>
           <li><a href="#milestones">Milestones</a></li>
-          <li><a href="#downloads">Downloads</a></li>
-          <li><a href="#team">Team</a></li>
+          <li><a href="#documents">Documents</a></li>
+          <li><a href="#slides">Slides</a></li>
         </ul>
       </div>
       <div class="footer-col">
@@ -794,8 +841,8 @@
         <ul class="footer-links">
           <li><a href="#literature">Literature</a></li>
           <li><a href="#methodology">Methodology</a></li>
-          <li><a href="#achievements">Recognition</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <li><a href="#about-us">About us</a></li>
+          <li><a href="#contact-us">Contact us</a></li>
         </ul>
       </div>
       <div class="footer-col footer-col-wide">
