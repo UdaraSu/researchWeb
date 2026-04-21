@@ -2158,10 +2158,6 @@ a:hover {
   border-top: 1px solid var(--line);
 }
 
-.about-achievements-header {
-  margin-top: 2.5rem;
-}
-
 .section-header--team {
   text-align: center;
   margin-inline: auto;
@@ -2326,7 +2322,9 @@ a:hover {
   z-index: 1;
   font-weight: 600;
   font-size: var(--step--1);
-  word-break: break-all;
+  margin: 0;
+  word-break: break-word;
+  color: var(--text-muted);
 }
 
 /* Contact */
