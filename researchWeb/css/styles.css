@@ -983,6 +983,15 @@ a:hover {
   margin: 1.75rem 0 0;
 }
 
+.figure-placeholder img {
+  display: block;
+  max-width: min(100%, 52rem);
+  margin: 0 auto;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-sm);
+}
+
 .figure-box {
   aspect-ratio: 16 / 9;
   max-height: 340px;
@@ -1019,6 +1028,7 @@ a:hover {
   margin-top: 0.85rem;
   font-size: var(--step--1);
   color: var(--text-muted);
+  text-align: center;
 }
 
 /* Tech panel + marquee */
