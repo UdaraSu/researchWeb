@@ -323,10 +323,63 @@
         return;
       }
 
-      formStatus.textContent =
-        "Thanks — this demo does not send mail yet. Connect Formspree or your API, or email the team directly.";
-      formStatus.classList.add("success");
-      form.reset();
+      var endpoint = (form.getAttribute("data-mail-endpoint") || "").trim();
+      var recipient = (form.getAttribute("data-recipient-email") || "").trim();
+      var submitBtn = form.querySelector('button[type="submit"]');
+      var originalBtnText = submitBtn ? submitBtn.textContent : "";
+
+      function setSubmitting(isSubmitting) {
+        if (!submitBtn) return;
+        submitBtn.disabled = isSubmitting;
+        submitBtn.setAttribute("aria-busy", isSubmitting ? "true" : "false");
+        submitBtn.textContent = isSubmitting ? "Sending..." : originalBtnText;
+      }
+
+      if (!endpoint) {
+        var subject = encodeURIComponent("MuseumLab Website Inquiry");
+        var body = encodeURIComponent(
+          "Name: " +
+            name.value.trim() +
+            "\nEmail: " +
+            em +
+            "\n\nMessage:\n" +
+            message.value.trim()
+        );
+        var to = recipient || "yourproject@email.com";
+        window.location.href = "mailto:" + to + "?subject=" + subject + "&body=" + body;
+        formStatus.textContent =
+          "Opening your email app. To enable direct web sending, add your endpoint to data-mail-endpoint in index.html.";
+        formStatus.classList.add("success");
+        return;
+      }
+
+      setSubmitting(true);
+      fetch(endpoint, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json"
+        },
+        body: JSON.stringify({
+          name: name.value.trim(),
+          email: em,
+          message: message.value.trim()
+        })
+      })
+        .then(function (res) {
+          if (!res.ok) throw new Error("submit_failed");
+          formStatus.textContent = "Message sent successfully. We will get back to you soon.";
+          formStatus.classList.add("success");
+          form.reset();
+        })
+        .catch(function () {
+          formStatus.textContent =
+            "Could not send right now. Please try again or email us directly from the contact card.";
+          formStatus.classList.add("error");
+        })
+        .finally(function () {
+          setSubmitting(false);
+        });
     });
   }
 })();

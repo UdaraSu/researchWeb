@@ -2486,11 +2486,13 @@ a:hover {
 .contact-layout {
   display: grid;
   gap: 2rem;
+  max-width: 52rem;
+  margin-inline: auto;
 }
 
 @media (min-width: 900px) {
   .contact-layout {
-    grid-template-columns: 1fr minmax(260px, 320px);
+    grid-template-columns: 1fr;
     align-items: start;
   }
 }
@@ -2501,11 +2503,13 @@ a:hover {
   border-radius: var(--radius-xl);
   padding: clamp(1.75rem, 4vw, 2.25rem);
   box-shadow: var(--shadow-md);
+  display: grid;
+  gap: 1rem;
 }
 
 .form-row.two {
   display: grid;
-  gap: 1rem;
+  gap: 1rem 1.15rem;
 }
 
 @media (min-width: 560px) {
@@ -2517,12 +2521,7 @@ a:hover {
 .field {
   display: flex;
   flex-direction: column;
-  gap: 0.35rem;
-  margin-bottom: 1rem;
-}
-
-.field:last-of-type {
-  margin-bottom: 0;
+  gap: 0.45rem;
 }
 
 .contact-form-pro label {
@@ -2554,13 +2553,13 @@ a:hover {
 }
 
 .contact-form-pro .btn {
-  margin-top: 0.5rem;
+  margin-top: 0.35rem;
   border: none;
 }
 
 .form-note {
   min-height: 1.5rem;
-  margin: 0.75rem 0 0;
+  margin: 0.35rem 0 0;
   font-size: var(--step--1);
 }
 

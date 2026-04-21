@@ -770,7 +770,13 @@
           </div>
         </header>
         <div class="contact-layout reveal">
-          <form class="contact-form contact-form-pro" id="contact-form" novalidate>
+          <form
+            class="contact-form contact-form-pro"
+            id="contact-form"
+            novalidate
+            data-mail-endpoint="https://formspree.io/f/xblybqyb"
+            data-recipient-email="yourproject@email.com"
+          >
             <div class="form-row two">
               <div class="field">
                 <label for="name">Name</label>
@@ -791,17 +797,6 @@
             </button>
             <p class="form-note" id="form-status" role="status" aria-live="polite"></p>
           </form>
-          <aside class="contact-aside contact-aside-pro">
-            <div class="contact-card">
-              <p class="contact-card-label">General contacts</p>
-              <a class="contact-email" href="mailto:yourproject@email.com">yourproject@email.com</a>
-              <p class="aside-hint">Phone: +94 71 000 0000<br />Phone: +94 11 000 0000</p>
-            </div>
-            <div class="contact-card">
-              <p class="contact-card-label">General email template</p>
-              <p class="aside-hint">Subject: [Project Inquiry] &lt;Topic&gt;<br />Body: Name, institute, purpose, and contact details.</p>
-            </div>
-          </aside>
         </div>
       </div>
     </section>
