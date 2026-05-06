@@ -124,6 +124,15 @@
     return header ? header.offsetHeight + 10 : 88;
   }
 
+  var backToTopLinks = document.querySelectorAll('a[href="#top"]');
+  backToTopLinks.forEach(function (link) {
+    link.addEventListener("click", function (e) {
+      e.preventDefault();
+      window.scrollTo({ top: 0, behavior: "smooth" });
+      history.pushState(null, "", "#top");
+    });
+  });
+
   navLinks.forEach(function (link) {
     link.addEventListener("click", function (e) {
       var id = link.getAttribute("href");
